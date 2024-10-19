@@ -11,7 +11,6 @@ class RelativeRank506Test {
 
     @InjectMocks
     RelativeRank506 relativeRank506;
-
     @Test
     void testRank(){
         int[] input = new int[5];
