@@ -7,7 +7,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
-
 class RelativeRank506Test {
 
     @InjectMocks
@@ -15,7 +14,6 @@ class RelativeRank506Test {
 
     @Test
     void testRank(){
-        assertEquals("1", "1");
         int[] input = new int[5];
         input[0] = 5;
         input[1]= 4;
