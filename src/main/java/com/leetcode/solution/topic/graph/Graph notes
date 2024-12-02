@@ -1,0 +1,31 @@
+graph can be created in java based on the fact
+ ---directed or undirected
+ ---weighted or unweighted
+
+ directed graph has only one direction for each entry i.e (a->b) only
+         for(int[] edge: edges){
+             graph.get(edge[0]).add(edge[1]);
+         }
+
+ undirected graph has entry for both the cases from (a->b and b->a)
+         for(int[] edge: edges){
+             graph.get(edge[0]).add(edge[1]);
+             graph.get(edge[1]).add(edge[0]);
+         }
+
+ //for unweighted graph we can use the list for traversal
+         List<List<Integer>> graph = new ArrayList<>();
+         for(int i = 0; i < n;i++){
+             graph.add(new ArrayList<>());
+         }
+ //for weighted graph, we need to store the weight corresponding to the edges for that
+
+          List<Map<Integer, Integer>> graph = new ArrayList<>();
+          for(int i = 0; i < n;i++){
+            graph.putIfNotPresent(edge[0],new HashMap<>());
+            graph.putIfNotPresent(edge[1],new HashMap<>());
+            graph.get(edge[0]).add(edge[1], weight[1]);
+            graph.get(edge[1]).add(edge[0], weight[0]);// in case of undirected graph
+          }
+ //for non Integer based graph- outer list will be converted to Map
+
