@@ -21,7 +21,7 @@ public class DetectCycleDirectedGraph {
         boolean[] visited = new boolean[n];
         Stack<Integer> st = new Stack<>();
 
-        for(int i =0; i <n; i++){
+        for(int i =0; i <n; i++){//to test the disconnected component as well
             if(!visited[i] && isCycle(graph, i, visited, st)){
                 return true;
             }
