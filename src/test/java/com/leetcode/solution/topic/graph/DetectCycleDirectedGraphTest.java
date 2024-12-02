@@ -6,11 +6,12 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @ExtendWith(MockitoExtension.class)
 class DetectCycleDirectedGraphTest {
 
     @InjectMocks
-        DetectCycleDirectedGraph leetcode;
+    DetectCycleDirectedGraph leetcode;
 
     @Test
     void testGraphAcyclic() {
@@ -23,6 +24,7 @@ class DetectCycleDirectedGraphTest {
         int[][] array = {{1, 0}, {0, 1}};
         assertTrue(leetcode.detectCycle(2, array));
     }
+
     @Test
     void testGraphSelfCyclic() {
         int[][] array = {{1, 0}, {0, 0}};
@@ -77,7 +79,7 @@ class DetectCycleDirectedGraphTest {
 
     @Test
     public void testGraphWithIsolatedNodes() {
-       
+
         int n = 3;
         int[][] edges = {};
         assertFalse(leetcode.detectCycle(n, edges), "Graph with isolated nodes should return false.");
