@@ -18,7 +18,7 @@ public class FinalArray3564 {
             pq.add(new int[]{nums[i], i});
         }
 
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k  && !pq.isEmpty(); i++) {
             int[] poll = pq.poll();
             pq.offer(new int[]{poll[0] * multiplier, poll[1]});
         }
